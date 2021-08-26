@@ -31,6 +31,7 @@ export default function UserList() {
                             fontSize="sm" 
                             colorScheme="pink"
                             leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+                            href="/users/create"
                         >
                             Criar Novo
                         </Button>
