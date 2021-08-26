@@ -76,6 +76,7 @@ export default function Dashboard() {
                     >
                         <Text fontSize="lg" mb="4">Inscritos da Semana</Text>
                         <Chart
+                            // @ts-ignore
                             options={options}
                             series={series}
                             type="area"
@@ -91,6 +92,7 @@ export default function Dashboard() {
                     >
                         <Text fontSize="lg" mb="4">Taxa de Abertura</Text>
                         <Chart
+                            // @ts-ignore
                             options={options}
                             series={series}
                             type="area"
