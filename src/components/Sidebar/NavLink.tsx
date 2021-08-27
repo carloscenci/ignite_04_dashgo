@@ -1,5 +1,6 @@
-import { Icon, Link, Text, LinkProps as ChakraLinkProps } from "@chakra-ui/react";
+import { Icon, Link as ChakraLink, Text, LinkProps as ChakraLinkProps } from "@chakra-ui/react";
 import { ElementType } from "react";
+import Link from 'next/link'
 
 interface NavLinkProps extends ChakraLinkProps {
     icon: ElementType;
@@ -9,9 +10,11 @@ interface NavLinkProps extends ChakraLinkProps {
 
 export function NavLink({icon, route, children, ...rest }: NavLinkProps) {
     return (
-        <Link display="flex" align="center" href={route} {...rest}>
-            <Icon as={icon} fontSize="20" />
-            <Text ml="4" fontWeight="medium">{children}</Text>
+        <Link href={route} passHref>
+            <ChakraLink display="flex" align="center" {...rest}>
+                <Icon as={icon} fontSize="20" />
+                <Text ml="4" fontWeight="medium">{children}</Text>
+            </ChakraLink>
         </Link>
     )
 }
